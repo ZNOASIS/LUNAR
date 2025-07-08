@@ -22,7 +22,7 @@ with open('/data3/zhangyuyang/LUNAR/harmful.json', 'r') as file:
     data = json.load(file)
 
 for i in tqdm(data):
-    prompt = i['instruction']
+    prompt = i['instruction'] + '.'
 
     inputs = tokenizer.encode(
         prompt,
